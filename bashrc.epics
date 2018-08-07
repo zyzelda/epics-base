@@ -1,0 +1,28 @@
+#bashrc.epics
+
+#Location of epics
+export EPICS_PATH=/BLC/epics
+
+#setup for gnu-gcc
+export WIND_BASE=$EPICS_PATH/Tornado2.2
+export WIND_HOST_ARCH=x86-linux
+
+#setup for  epics-base
+export EPICS_BASE=$EPICS_PATH/base
+export EPICS_HOST_ARCH=linux-x86
+export HOST_ARCH=linux-x86
+
+export EPICS_CA_ADDR_LIST=""
+
+#setup for extensions
+export EPICS_EXTENSIONS=$EPICS_PATH/extensions
+
+#setup for edm
+export EDMBASE=$EPICS_EXTENSIONS/src/edm
+export EDMFILES=$EDMBASE/setup
+export EDMOBJECTS=$EDMBASE/setup
+export EDMPVOBJECTS=$EDMBASE/setup
+export EDMHELPFILES=$EDMBASE/helpFiles
+
+#setup for PATH
+export PATH=$PATH:$EPICS_BASE/bin/$HOST_ARCH:$EPICS_EXTENSIONS/bin/$HOST_ARCH:/BLC/epics/css-nsls2
